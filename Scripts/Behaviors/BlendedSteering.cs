@@ -10,7 +10,6 @@ public class BehaviorAndWeight
 
 public class BlendedSteering
 {
-
     public BehaviorAndWeight[] behaviors;
 
     float maxAcceleration = 1f; // 1
