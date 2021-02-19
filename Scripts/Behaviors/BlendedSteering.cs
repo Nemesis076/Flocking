@@ -19,8 +19,6 @@ public class BlendedSteering
     public SteeringOutput getSteering()
     {
         SteeringOutput result = new SteeringOutput();
-
-        // accumulate all accelrations
         foreach (BehaviorAndWeight b in behaviors)
         {
             SteeringOutput s = b.behavior.getSteering();
