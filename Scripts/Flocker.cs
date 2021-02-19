@@ -11,7 +11,6 @@ public class Flocker : Kinematic
 
     void Start()
     {
-        // Separate from other birds
         Separation separate = new Separation();
         separate.character = this;
         GameObject[] goBirds = GameObject.FindGameObjectsWithTag("bird");
@@ -27,12 +26,10 @@ public class Flocker : Kinematic
         }
         separate.targets = kBirds;
 
-        // Cohere to center of mass - ez mode
         Arrive cohere = new Arrive();
         cohere.character = this;
         cohere.target = myCohereTarget;
 
-        // look where center of mass is going - ez mode
         LookWhereGoing myRotateType = new LookWhereGoing();
         myRotateType.character = this;
 
@@ -50,7 +47,6 @@ public class Flocker : Kinematic
 
     }
 
-    // Update is called once per frame
     protected override void Update()
     {
         steeringUpdate = new SteeringOutput();
