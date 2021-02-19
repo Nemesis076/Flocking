@@ -11,8 +11,7 @@ public class BehaviorAndWeight
 public class BlendedSteering
 {
     public BehaviorAndWeight[] behaviors;
-
-    float maxAcceleration = 1f; // 1
+    float maxAcceleration = 1f; 
     float maxRotation = 5f;
 
     public SteeringOutput getSteering()
@@ -35,8 +34,6 @@ public class BlendedSteering
             result.angular /= angularAcceleration;
             result.angular *= maxRotation;
         }
-
         return result;
     }
-
 }
