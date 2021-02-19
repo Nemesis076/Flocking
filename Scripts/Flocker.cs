@@ -29,10 +29,9 @@ public class Flocker : Kinematic
         Arrive cohere = new Arrive();
         cohere.character = this;
         cohere.target = myCohereTarget;
-
         LookWhereGoing myRotateType = new LookWhereGoing();
         myRotateType.character = this;
-
+        
         mySteering = new BlendedSteering();
         mySteering.behaviors = new BehaviorAndWeight[3];
         mySteering.behaviors[0] = new BehaviorAndWeight();
@@ -44,7 +43,6 @@ public class Flocker : Kinematic
         mySteering.behaviors[2] = new BehaviorAndWeight();
         mySteering.behaviors[2].behavior = myRotateType;
         mySteering.behaviors[2].weight = 1f;
-
     }
 
     protected override void Update()
